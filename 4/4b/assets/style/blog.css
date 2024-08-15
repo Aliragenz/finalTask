@@ -127,7 +127,7 @@ nav{
 
 .button{
     color: whitesmoke; 
-    background-color: darkslategrey; 
+    /* background-color: darkslategrey;  */
     border-radius: 15px;
     padding: 5px 20px;
     font-size: 16px;
@@ -172,7 +172,7 @@ nav{
     margin-bottom: 20px;
     background: #f4f3f3;
     border: 1px solid #c4c4c4;
-    border-radius: 8px;
+    border-radius: 15px;
   }
   
   .blog-form form textarea {

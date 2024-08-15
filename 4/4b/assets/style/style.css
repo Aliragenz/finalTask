@@ -1,21 +1,36 @@
 .custom-card {
     width: 200px;  /* Adjust the width */
     height: 220px; /* Adjust the height */
-    background-color: dimgray;
+    background-color: #97c09a;
     border-radius: 10px;
     color: #fff;
     margin-top: 15px;
-    margin-left: 75px;
+    /* margin-left: 75px; */
     padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.custom-card-task {
+    width: 300px;  /* Adjust the width */
+    height: 220px; /* Adjust the height */
+    background-color: #97c09a;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 15px;
+    /* margin-left: 75px; */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .card-icon {
     width: 40px;
     height: 40px;
     /* background-color: #f2f2f2; */
+    color: black;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -29,11 +44,13 @@
 
 .card-subtitle {
     font-size: 14px;
-    color: #b0b0b0;
+    /* color: #b0b0b0; */
+    color: black;
 }
 
 .card-time-icon {
-    color: #d39de8;
+    /* color: #d39de8; */
+    color: black;
     font-size: 40px;
 }
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style/blog.css" />
+    <link rel="stylesheet" href="/assets/style/blog.css" />
     <title>Add Task</title>
 </head>
 <body>
@@ -47,15 +47,23 @@
     </nav>
 
   <!-- ------------NAVBAR-END--------------- -->
-
-    <h2>Add Task for Collection {{collectionId}}</h2>
-    <form action="/addTasks/{{collectionId}}" method="POST">
+  <div class="blog">
+        <div class="blog-form">
+            <div class="form-container">
+            <form action="/addTasks/{{collectionId}}" method="POST">
+            <h2>Add Task for Collection {{collectionId}}</h2>
         <input type="hidden" name="user_id" value="{{user_id}}">
         <input type="hidden" name="previous_url" value="/detail/{{user_id}}/{{collectionId}}">
-        <input type="text" name="task_name" placeholder="Task Name" required>
-        <button type="submit">Add Task</button>
+        
+          <input type="text" name="task_name" id="input-blog-title"  placeholder="Task Name" required>
+          <button type="button" class="btn btn-danger" onclick="window.location.href='{{previous_url}}'">Back</button>
+          <button type="submit" class="btn btn-success">Add Task</button>
+        
+            </div>
     </form>
-    <button onclick="window.location.href='{{previous_url}}'">Back</button>
-
+        </div>
+  </div>
+    
+    
 </body>
 </html>
