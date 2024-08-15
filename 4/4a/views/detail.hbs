@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Detail</title>
+    <style>
+        table, td, th, tr{
+            border: 1px solid black !important;
+        }
+        button a{
+            text-decoration: none; 
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Details</h2>
+    <p><strong>ID:</strong> {{ user.id }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+
+    <h2>Collections</h2>
+    <button type="button"><a href="/addCollections/{{ user.id }}">Add Collection</a></button>
+    <table style="border: 1px solid black;">
+        <tr>
+            <th>Collection ID</th>
+            <th>Collection Name</th>
+            <th>Action</th>
+        </tr>
+        {{#each collections}}
+        <tr>
+            <td>{{ this.collection_id }}</td>
+            <td>{{ this.collection_name }}</td>
+            <td><a href="/addTasks/{{ this.collection_id }}">Add Task</a></td>
+        </tr>
+        {{/each}}
+    </table>
+
+    <h2>Tasks</h2>
+    <table style="border: 1px solid black;">
+        <tr>
+            <th>Task ID</th>
+            <th>Task Name</th>
+            <th>Is Done</th>
+            <th>Collection ID</th>
+            <th>Collection Name</th>
+        </tr>
+        {{#each tasks}}
+        <tr>
+            <td>{{ this.task_id }}</td>
+            <td>{{ this.task_name }}</td>
+            <td>{{ this.task_done }}</td>
+            <td>{{ this.collections_id }}</td>
+            <td>{{ this.collection_name }}</td>
+        </tr>
+        {{/each}}
+    </table>
+
+    <a href="/">Back to User List</a>
+</body>
+</html>

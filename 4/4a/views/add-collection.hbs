@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Collection</title>
+</head>
+<body>
+    <h2>Add Collection for User {{userId}}</h2>
+    <form action="/addCollections/{{userId}}" method="POST">
+        <input type="hidden" name="user_id" value="{{user_id}}">
+        <input type="text" name="collection_name" placeholder="Collection Name" required>
+        <button type="submit">Add Collection</button>
+    </form>
+    <a href="/detail/{{userId}}">Back to User Detail</a>
+</body>
+</html>

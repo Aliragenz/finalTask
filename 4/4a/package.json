@@ -1,0 +1,21 @@
+{
+  "name": "Final Task",
+  "version": "1.0.0",
+  "description": "Final Task 4a",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "author": "Rendy Septianu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "hbs": "^4.2.0",
+    "mysql2": "^3.11.0",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

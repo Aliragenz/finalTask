@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, td, th, tr{
+            border: 1px solid black;
+        }
+    </style>
+    <title>CRUD Select</title>
+</head>
+<body>
+    <table style="border: 1px solid black;">
+        <h2>Table User</h2>
+        <tr>
+        <th>id</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Actions</th>
+        </tr>
+        {{#each user}}
+        <tr>
+            <td>{{ this.id }}</td>
+            <td>{{ this.email }}</td>
+            <td>{{ this.username }}</td>
+            <td>{{ this.password }}</td>
+            <td><a href="/detail/{{ this.id }}">View Details</a></td>
+        </tr>
+        {{/each}}
+    </table>
+
+    {{!-- <table style="border: 1px solid black;">
+        <h2>Table Collections dengan Task dan username</h2>
+        <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>user id</th>
+        <th>username</th>
+        <th>task name</th>
+        </tr>
+        {{#each collections}}
+        <tr>
+            <td>{{this.collection_id}}</td>
+            <td>{{this.collection_name}}</td>
+            <td>{{this.user_id}}</td>
+            <td>{{this.username}}</td>
+            
+            <td>{{this.task_name}}</td>
+            <td>{{this.name}}</td>
+            
+            {{#each user}}
+            <td>{{this.username}} test</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </table> --}}
+    
+</body>
+</html>
